@@ -1,0 +1,6 @@
+*** Unit Test Error Report ***
+
+
+*** Spell Checker Report ***
+
+ex1-giveCompliment.js:27:20 - Unknown word (Rana)

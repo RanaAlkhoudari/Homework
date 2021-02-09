@@ -27,28 +27,39 @@ body, this code is now written once only in a separated function.
 -----------------------------------------------------------------------------*/
 const numKids = [
   // TODO add elements here
+  7, 9, 2, 3, 1
 ];
 
 const partnerNames = [
   // TODO add elements here
+  "Sarah", "Jane", "Mari", "Jana", "Ahmad"
 ];
 
 const locations = [
   // TODO add elements here
+  "Syria", "The Netherlands", "Germany", "Turkey", "Greece"
 ];
 
 const jobTitles = [
   // TODO add elements here
+  "programmer", "lawyer", "doctor", "teacher", "architect"
 ];
 
 // This function should take an array as its parameter and return
 // a randomly selected element as its return value.
-function selectRandomly(/* TODO parameter(s) go here */) {
+function selectRandomly(arr) {
   // TODO complete this function
+  const random = Math.floor(Math.random() * arr.length);
+    return arr[random]
 }
 
-function tellFortune(/* add parameter(s) here */) {
+function tellFortune(numOfKids, namesOfPartner, location, titlesOfJob) {
   // TODO complete this function
+  const randomNum = selectRandomly(numOfKids);
+  const randomPartnerNames = selectRandomly(namesOfPartner);
+  const randomLocations = selectRandomly(location);
+  const randomJobTitles = selectRandomly(titlesOfJob);
+  return `You will be a ${randomJobTitles} in ${randomLocations} married to ${randomPartnerNames} with ${randomNum} kids.`;
 }
 
 console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
