@@ -29,33 +29,40 @@ const mondayTasks = [
 
 const hourlyRate = 25;
 
-function computeEarnings(/* TODO parameter(s) go here */) {
+function computeEarnings(arr, rate) {
   // TODO complete this function
+  const tasks = arr.map(task => task.duration * rate / 60);
+  const result = tasks.reduce((accumulator, currentValue) => {
+      return accumulator + currentValue
+  }, 0);
+
+   return `€${result.toFixed(2)}`
 }
 
-// example use case 1
+//example use case 1
 const earnings = computeEarnings(mondayTasks, hourlyRate);
-console.log(`Total earnings: ${earnings}`); // -> "Total earnings: €187.5"
+
+console.log(`Total earnings:${earnings}`); // -> "Total earnings: €187.5"
 
 // example use case 2
-const earnings = computeEarnings(
-  [
-    {
-      name: 'walked 3 dogs',
-      duration: 230,
-    },
-    {
-      name: 'cooked 4 bowls of soup',
-      duration: 185,
-    },
-    {
-      name: 'cleaned 5 dirty dishes',
-      duration: 95,
-    },
-  ],
-  hourlyRate
-);
-console.log(`Total earnings: ${earnings}`); // -> "Total earnings: €212.5"
+// const earnings = computeEarnings(
+//   [
+//     {
+//       name: 'walked 3 dogs',
+//       duration: 230,
+//     },
+//     {
+//       name: 'cooked 4 bowls of soup',
+//       duration: 185,
+//     },
+//     {
+//       name: 'cleaned 5 dirty dishes',
+//       duration: 95,
+//     },
+//   ],
+//   hourlyRate
+// );
+// console.log(`Total earnings: €${earnings}`); // -> "Total earnings: €212.5"
 
 // ! Do not change or remove the code below
 module.exports = {
