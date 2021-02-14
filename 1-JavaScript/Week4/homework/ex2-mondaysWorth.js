@@ -44,7 +44,7 @@ const earnings = computeEarnings(mondayTasks, hourlyRate);
 
 console.log(`Total earnings:${earnings}`); // -> "Total earnings: €187.5"
 
-// example use case 2
+// //example use case 2
 // const earnings = computeEarnings(
 //   [
 //     {

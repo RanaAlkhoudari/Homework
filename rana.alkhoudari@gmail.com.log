@@ -387,3 +387,109 @@ ex2-mondaysWorth.js
 2021-02-12 05:55:07 info: --------------------------------------
 2021-02-12 05:55:13 info: All unit tests passed.
 2021-02-12 05:55:16 info: All steps were completed successfully
+2021-02-14 07:02:25 info: --------------------------------------------
+2021-02-14 07:02:25 info: >>> Running Unit Test `ex2-mondaysWorth` <<<
+2021-02-14 07:02:25 info: --------------------------------------------
+2021-02-14 07:02:25 error: *** Unit Test Error Report ***
+
+
+2021-02-14 07:02:27 error: *** ESLint Report ***
+
+ex2-mondaysWorth.js
+  48:1  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2021-02-14 07:03:33 info: --------------------------------------------
+2021-02-14 07:03:33 info: >>> Running Unit Test `ex2-mondaysWorth` <<<
+2021-02-14 07:03:33 info: --------------------------------------------
+2021-02-14 07:03:33 error: *** Unit Test Error Report ***
+
+
+2021-02-14 07:03:33 error: *** ESLint Report ***
+
+ex2-mondaysWorth.js
+  48:1  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2021-02-14 07:03:44 info: --------------------------------------------
+2021-02-14 07:03:44 info: >>> Running Unit Test `ex2-mondaysWorth` <<<
+2021-02-14 07:03:44 info: --------------------------------------------
+2021-02-14 07:03:44 error: *** Unit Test Error Report ***
+
+
+2021-02-14 07:03:44 error: *** ESLint Report ***
+
+ex2-mondaysWorth.js
+  48:7  error  Parsing error: Identifier 'earnings' has already been declared
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2021-02-14 07:42:51 info: -------------------------------------------------
+2021-02-14 07:42:51 info: >>> Running Unit Test `ex1-doubleEvenNumbers` <<<
+2021-02-14 07:42:51 info: -------------------------------------------------
+2021-02-14 07:42:52 error: *** Unit Test Error Report ***
+
+
+2021-02-14 07:43:17 info: --------------------------------------------
+2021-02-14 07:43:17 info: >>> Running Unit Test `ex2-mondaysWorth` <<<
+2021-02-14 07:43:17 info: --------------------------------------------
+2021-02-14 07:43:18 error: *** Unit Test Error Report ***
+
+
+2021-02-14 07:43:19 error: *** ESLint Report ***
+
+ex2-mondaysWorth.js
+  48:7  error  Parsing error: Identifier 'earnings' has already been declared
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2021-02-14 07:43:51 info: --------------------------------------------
+2021-02-14 07:43:51 info: >>> Running Unit Test `ex2-mondaysWorth` <<<
+2021-02-14 07:43:51 info: --------------------------------------------
+2021-02-14 07:43:52 error: *** Unit Test Error Report ***
+
+
+2021-02-14 07:43:53 error: *** ESLint Report ***
+
+ex2-mondaysWorth.js
+  48:1  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2021-02-14 07:44:10 info: --------------------------------------------
+2021-02-14 07:44:10 info: >>> Running Unit Test `ex3-lemonAllergy` <<<
+2021-02-14 07:44:10 info: --------------------------------------------
+2021-02-14 07:44:10 error: *** Unit Test Error Report ***
+
+
+2021-02-14 07:44:49 info: --------------------------------------
+2021-02-14 07:44:49 info: >>> Running Unit Test `ex5-wallet` <<<
+2021-02-14 07:44:49 info: --------------------------------------
+2021-02-14 07:44:50 error: *** Unit Test Error Report ***
+
+
+2021-02-14 07:45:29 info: --------------------------------------
+2021-02-14 07:45:29 info: >>> Running Unit Test `ex5-wallet` <<<
+2021-02-14 07:45:29 info: --------------------------------------
+2021-02-14 07:45:29 error: *** Unit Test Error Report ***
+
+
+2021-02-14 07:46:39 info: --------------------------------------
+2021-02-14 07:46:39 info: >>> Running Unit Test `ex5-wallet` <<<
+2021-02-14 07:46:39 info: --------------------------------------
+2021-02-14 07:46:39 error: *** Unit Test Error Report ***
+
+
+2021-02-14 07:47:00 info: --------------------------------------
+2021-02-14 07:47:00 info: >>> Running Unit Test `ex5-wallet` <<<
+2021-02-14 07:47:00 info: --------------------------------------
+2021-02-14 07:47:00 error: *** Unit Test Error Report ***
+
+
