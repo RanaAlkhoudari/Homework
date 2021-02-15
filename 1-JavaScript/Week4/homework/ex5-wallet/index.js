@@ -113,6 +113,6 @@ const quiz = {
       b: 'Joe', 
       c: 'Jane' 
     },
-    answer: " ",
+    answer: "c",
   },
 };
