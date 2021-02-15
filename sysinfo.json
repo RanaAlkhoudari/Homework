@@ -70,22 +70,10 @@
       "size": "121 GB",
       "fsType": "APFS",
       "physical": "SSD"
-    },
-    {
-      "name": "/dev/disk2",
-      "size": "0 GB",
-      "fsType": "",
-      "physical": "CD/DVD"
-    },
-    {
-      "name": "/dev/disk2s1",
-      "size": "0 GB",
-      "fsType": "HFS+",
-      "physical": "CD/DVD"
     }
   ],
   "vscodeInfo": {
-    "version": "1.52.1",
+    "version": "1.53.0",
     "extensions": [
       "dbaeumer.vscode-eslint",
       "esbenp.prettier-vscode",
