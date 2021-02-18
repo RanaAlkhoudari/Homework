@@ -42,12 +42,11 @@ function createPublisher() {
   return {
     subscribe: function (func) {
       // TODO complete this function
-      return listeners.push(func)
+      return listeners.push(func);
     },
     notify: function (str) {
       // TODO complete this function
-      return listeners.map(a => a(str));
-      
+      return listeners.map((fun) => fun(str));
     },
   };
 }

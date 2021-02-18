@@ -77,7 +77,7 @@ const quiz = {
       b: 'cash, name', 
       c: 'amount, this, wallet'
     },
-    answer: "b",
+    answer:"b",
   },
   q2: {
     question: 'What is in the Call Stack, from top to bottom?',

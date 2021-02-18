@@ -25,9 +25,8 @@ const fruitBasket = [
 
 function sanitizeFruitBasket(arr, str) {
   // TODO complete this function
-  const fruits = arr.filter(fruit => !fruit.includes(str));
-  const result = fruits.join(", ")
-  return `My mom bought me a fruit basket containing ${result}!`
+  const fruits = arr.filter((fruit) => !fruit.includes(str)).join(', ');
+  return `My mom bought me a fruit basket containing ${fruits}!`;
 }
 
 console.log(sanitizeFruitBasket(fruitBasket, 'lemon'));
