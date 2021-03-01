@@ -19,7 +19,36 @@
 //cspell: enable
 
 function createBookList(books) {
-  // your code goes in here, return the ul element
+  const list = document.createElement('ul');
+  list.style.listStyle = 'none';
+  for (const book of books) {
+    const items = document.createElement('li');
+    items.style.padding = '10px';
+    items.style.margin = '10px';
+    items.style.float = 'left';
+    const image = document.createElement('img');
+    image.style.width = '150px';
+    image.style.height = '150px';
+
+    if (book.title === 'The Design of Everyday Things') {
+      image.src = './assets/the_design_of_everyday_things.jpg';
+    } else if (book.title === 'The Most Human Human') {
+      image.src = './assets/the_most_human_human.jpg';
+    } else {
+      image.src = './assets/the_pragmatic_programmer.jpg';
+    }
+    image.alt = `${book.title}`;
+    (items.innerHTML = `<p> ${book.title}, ${book.author} </p>`),
+      items.appendChild(image);
+    list.appendChild(items);
+
+    if (book.alreadyRead === true) {
+      items.style.backgroundColor = 'green';
+    } else {
+      items.style.backgroundColor = 'red';
+    }
+  }
+  return list;
 }
 
 const myBooks = [
@@ -42,4 +71,4 @@ const myBooks = [
 
 const ulElement = createBookList(myBooks);
 
-// document.querySelector('#bookList').appendChild(ulElement);
+document.querySelector('#bookList').appendChild(ulElement);
