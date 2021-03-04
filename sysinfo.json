@@ -1,0 +1,93 @@
+{
+  "node": "v12.18.3",
+  "system": {
+    "manufacturer": "Apple Inc.",
+    "model": "MacBookAir8,2"
+  },
+  "cpu": {
+    "manufacturer": "Intel®",
+    "brand": "Core™ i5-8210Y",
+    "speed": 1.6,
+    "virtualization": true
+  },
+  "memory": "8 GB",
+  "osInfo": {
+    "platform": "darwin",
+    "distro": "Mac OS X",
+    "release": "10.15.7"
+  },
+  "blockDevices": [
+    {
+      "name": "/dev/disk0",
+      "size": "121 GB",
+      "fsType": "",
+      "physical": "SSD"
+    },
+    {
+      "name": "/dev/disk0s1",
+      "size": "0 GB",
+      "fsType": "MS-DOS FAT32",
+      "physical": "SSD"
+    },
+    {
+      "name": "/dev/disk0s2",
+      "size": "121 GB",
+      "fsType": "",
+      "physical": "SSD"
+    },
+    {
+      "name": "/dev/disk1",
+      "size": "121 GB",
+      "fsType": "",
+      "physical": "SSD"
+    },
+    {
+      "name": "/dev/disk1s1",
+      "size": "121 GB",
+      "fsType": "APFS",
+      "physical": "SSD"
+    },
+    {
+      "name": "/dev/disk1s2",
+      "size": "121 GB",
+      "fsType": "APFS",
+      "physical": "SSD"
+    },
+    {
+      "name": "/dev/disk1s3",
+      "size": "121 GB",
+      "fsType": "APFS",
+      "physical": "SSD"
+    },
+    {
+      "name": "/dev/disk1s4",
+      "size": "121 GB",
+      "fsType": "APFS",
+      "physical": "SSD"
+    },
+    {
+      "name": "/dev/disk1s5",
+      "size": "121 GB",
+      "fsType": "APFS",
+      "physical": "SSD"
+    }
+  ],
+  "vscodeInfo": {
+    "version": "1.53.0",
+    "extensions": [
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "ritwickdey.LiveServer",
+      "rvest.vs-code-prettier-eslint",
+      "streetsidesoftware.code-spell-checker"
+    ],
+    "userSettings": {
+      "workbench.startupEditor": "newUntitledFile",
+      "timeline.excludeSources": [
+        "git-history"
+      ],
+      "terminal.integrated.shell.osx": "/bin/bash",
+      "workbench.statusBar.visible": false
+    }
+  }
+}

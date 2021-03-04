@@ -23,8 +23,10 @@ const fruitBasket = [
   'lemon',
 ];
 
-function sanitizeFruitBasket(/* TODO parameter(s) go here */) {
+function sanitizeFruitBasket(arr, str) {
   // TODO complete this function
+  const fruits = arr.filter((fruit) => fruit !== str).join(', ');
+  return `My mom bought me a fruit basket containing ${fruits}!`;
 }
 
 console.log(sanitizeFruitBasket(fruitBasket, 'lemon'));
