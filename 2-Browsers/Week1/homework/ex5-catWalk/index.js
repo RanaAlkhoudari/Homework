@@ -15,8 +15,31 @@
    for 5 seconds, and then replace the img with the original image and have it 
    continue the walk.
 -----------------------------------------------------------------------------*/
+const image = document.querySelector('img');
+image.style.left = '0px';
+const body = document.querySelector('body');
+const maxDist = body.offsetWidth - image.offsetWidth;
+let position = 0;
+let hasDanced = false;
 function catWalk() {
-  // TODO complete this function
+  const walking = setInterval(function () {
+    position += 10;
+    image.style.left = position + 'px';
+    if (position > maxDist) {
+      position = 0;
+      hasDanced = false;
+    } else if (!hasDanced && position >= maxDist / 2) {
+      clearInterval(walking);
+      const savedSrc = image.src;
+      image.src =
+        'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif?itemid=10561424';
+      setTimeout(() => {
+        hasDanced = true;
+        image.src = savedSrc;
+        catWalk();
+      }, 5000);
+    }
+  }, 50);
 }
 
-// TODO execute `catWalk` when the browser has completed loading the page
+window.addEventListener('load', catWalk);

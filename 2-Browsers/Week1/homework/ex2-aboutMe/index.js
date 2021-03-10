@@ -8,4 +8,17 @@
    `list-item`.
 ------------------------------------------------------------------------------*/
 
-// TODO add your JavaScript code here.
+
+const body = document.querySelector("body");
+const nickName = document.getElementById("nickname");
+const favFood = document.getElementById("fav-food");
+const homeTown = document.getElementById("hometown");
+const listItem = document.getElementsByTagName("li");
+body.style.fontFamily = "Arial, sans-serif";
+nickName.innerText = "Ran";
+favFood.innerText = "lasagna";
+homeTown.innerText = "Damascus";
+
+listItem.forEach(item => item.className = "list-item");
+
+
