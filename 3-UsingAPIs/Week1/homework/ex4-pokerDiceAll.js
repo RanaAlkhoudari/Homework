@@ -20,7 +20,7 @@ const rollDice = require('../../helpers/pokerDiceRoller');
 function rollTheDices() {
   // TODO Refactor this function
   const dices = [1, 2, 3, 4, 5];
-  return rollDice(1);
+  return Promise.all(dices.map((dice) => rollDice(dice)));
 }
 
 rollTheDices()
@@ -29,3 +29,6 @@ rollTheDices()
 
 // ! Do not change or remove the code below
 module.export = rollTheDices;
+
+//The dices don't stop after rejection and it's normal because we didn't return after reject.
+//The early return purpose is to terminate the execution of the function after the rejection.
