@@ -30,5 +30,6 @@ rollTheDices()
 // ! Do not change or remove the code below
 module.export = rollTheDices;
 
-//The dices don't stop after rejection and it's normal because we didn't return after reject.
-//The early return purpose is to terminate the execution of the function after the rejection.
+//The dices don't stop after rejection and it's normal because sometimes they haven't finish their roll.
+//Using promises and returning the rejection doesn't mean stop the execution of the function.
+
