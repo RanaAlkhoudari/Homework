@@ -20,7 +20,7 @@ const rollDice = require('../../helpers/pokerDiceRoller');
 function rollTheDices() {
   // TODO Refactor this function
   const dices = [1, 2, 3, 4, 5];
-  return rollDice(1);
+  return Promise.all(dices.map((dice) => rollDice(dice)));
 }
 
 rollTheDices()
@@ -29,3 +29,7 @@ rollTheDices()
 
 // ! Do not change or remove the code below
 module.export = rollTheDices;
+
+//The dices sometimes don't stop after rejection and it's normal because they haven't finish their roll.
+//Using promises and catching the errors doesn't mean stop the execution of the function.
+
