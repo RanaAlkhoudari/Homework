@@ -18,18 +18,47 @@ Complete the four functions provided in the starter `index.js` file:
 Try and avoid using global variables. Instead, use function parameters and 
 return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-function fetchData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchData(url) {
+  const data = await fetch(url);
+  const dataJson = await data.json();
+  return dataJson;
 }
 
-function fetchAndPopulatePokemons(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function fetchAndPopulatePokemons(data) {
+  const button = document.createElement('button');
+  button.textContent = 'Get Pokemon!';
+  const select = document.createElement('select');
+  select.style.display = 'block';
+  document.body.append(button, select);
+  data.results.forEach((element) => {
+    const option = document.createElement('option');
+    option.textContent = element.name;
+    option.value = element.name;
+    button.addEventListener('click', () => {
+      select.appendChild(option);
+    });
+  });
 }
 
-function fetchImage(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function fetchImage(pokemonValue) {
+  fetchData(pokemonValue).then((res) => {
+    document.querySelector('img').src = res.sprites.front_default;
+  });
 }
 
-function main() {
-  // TODO complete this function
+async function main() {
+  try {
+    const data = await fetchData('https://pokeapi.co/api/v2/pokemon?limit=151');
+    fetchAndPopulatePokemons(data);
+    const select = document.querySelector('select');
+    select.addEventListener('change', (event) => {
+      select.value = event.target.value;
+      fetchImage(`https://pokeapi.co/api/v2/pokemon/${select.value}`);
+    });
+    const image = document.createElement('img');
+    document.body.appendChild(image);
+  } catch (error) {
+    console.log(error);
+  }
 }
+window.addEventListener('load', main);
