@@ -16,9 +16,7 @@
    should result in a network (DNS) error.
 ------------------------------------------------------------------------------*/
 function requestData(url) {
-  return fetch(url)
-    .then((data) => data.json())
-    .then((dataJson) => dataJson);
+  return fetch(url).then((data) => data.json());
 }
 
 function renderImage(data) {

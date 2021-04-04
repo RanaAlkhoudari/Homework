@@ -19,24 +19,20 @@ Try and avoid using global variables. Instead, use function parameters and
 return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
 async function fetchData(url) {
-  const data = await fetch(url);
-  const dataJson = await data.json();
-  return dataJson;
+  const res = await fetch(url);
+  if (!res.ok) {
+    throw new Error(`HTTP error! status: ${res.status}`);
+  }
+  const data = await res.json();
+  return data;
 }
 
 function fetchAndPopulatePokemons(data) {
-  const button = document.createElement('button');
-  button.textContent = 'Get Pokemon!';
-  const select = document.createElement('select');
-  select.style.display = 'block';
-  document.body.append(button, select);
   data.results.forEach((element) => {
     const option = document.createElement('option');
     option.textContent = element.name;
     option.value = element.name;
-    button.addEventListener('click', () => {
-      select.appendChild(option);
-    });
+    document.querySelector('select').appendChild(option);
   });
 }
 
@@ -49,8 +45,14 @@ function fetchImage(pokemonValue) {
 async function main() {
   try {
     const data = await fetchData('https://pokeapi.co/api/v2/pokemon?limit=151');
-    fetchAndPopulatePokemons(data);
-    const select = document.querySelector('select');
+    const button = document.createElement('button');
+    button.textContent = 'Get Pokemon!';
+    const select = document.createElement('select');
+    select.style.display = 'block';
+    document.body.append(button, select);
+    button.addEventListener('click', () => {
+      fetchAndPopulatePokemons(data);
+    });
     select.addEventListener('change', (event) => {
       select.value = event.target.value;
       fetchImage(`https://pokeapi.co/api/v2/pokemon/${select.value}`);
