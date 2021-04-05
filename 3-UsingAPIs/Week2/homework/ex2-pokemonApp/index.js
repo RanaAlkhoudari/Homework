@@ -18,18 +18,54 @@ Complete the four functions provided in the starter `index.js` file:
 Try and avoid using global variables. Instead, use function parameters and 
 return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-function fetchData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchData(url) {
+  const res = await fetch(url);
+  if (!res.ok) {
+    throw new Error(`HTTP error! status: ${res.status}`);
+  }
+  const data = await res.json();
+  return data;
 }
 
-function fetchAndPopulatePokemons(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchAndPopulatePokemons() {
+  const data = await fetchData('https://pokeapi.co/api/v2/pokemon?limit=151');
+  data.results.forEach((element) => {
+    const option = document.createElement('option');
+    option.textContent = element.name;
+    option.value = element.url;
+    document.querySelector('select').appendChild(option);
+  });
 }
 
-function fetchImage(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchImage(url) {
+  const res = await fetchData(url);
+  let image = document.querySelector('img');
+  if (!image) {
+    image = document.createElement('img');
+    document.body.appendChild(image);
+  }
+  image.src = res.sprites.front_default;
+  image.alt = res.name;
 }
 
 function main() {
-  // TODO complete this function
+  try {
+    const button = document.createElement('button');
+    button.textContent = 'Get Pokemon!';
+    button.setAttribute('type', 'button');
+    const select = document.createElement('select');
+    select.style.display = 'block';
+    document.body.append(button, select);
+
+    button.addEventListener('click', () => {
+      fetchAndPopulatePokemons();
+    });
+    select.addEventListener('change', (event) => {
+      select.value = event.target.value;
+      fetchImage(select.value);
+    });
+  } catch (error) {
+    console.log(error);
+  }
 }
+window.addEventListener('load', main);
